@@ -29,7 +29,8 @@ const Table = ({ search, users, deleteUser, showModal }) => {
     return (
       user.name.toLowerCase().includes(q) ||
       user.username.toLowerCase().includes(q) ||
-      user.email.toLowerCase().includes(q)
+      user.email.toLowerCase().includes(q) ||
+      user.phone.toLowerCase().includes(q) 
     );
   });
 
