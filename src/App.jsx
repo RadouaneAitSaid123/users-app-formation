@@ -1,13 +1,13 @@
 import "./App.css";
-import Navbare from "./components/Navbare";
-import Users from "./pages/Users";
+import Navbare from "./components/navbar";
+import Users from "./pages/users";
 
 const App = () => {
   return (
     <>
       <Navbare />
       <div className="container mt-4">
-        <Users></Users>
+        <Users />
       </div>
     </>
   );
