@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 
-import UserRow from "./userRow";
+import UserRow from "./UserRow";
 
-const Table = ({ search, users, deleteUser, showModal }) => {
+const Table = ({ search, users, deleteUser }) => {
   const filteredList = useMemo(
     () =>
       users.filter((user) =>
@@ -30,7 +30,6 @@ const Table = ({ search, users, deleteUser, showModal }) => {
                 key={user.id}
                 user={user}
                 deleteUser={deleteUser}
-                showUserDetails={showModal}
               />
             ))}
           </tbody>

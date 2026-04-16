@@ -1,9 +1,5 @@
-import { useState } from "react";
-
 import InputSearch from "../../components/InputSearch";
-import UserList from "../../components/userList";
-import UserModal from "../../components/userModal";
-import UserDetails from "../user";
+import UserList from "../../components/UserList";
 import { useNavigate } from "react-router";
 
 const Users = ({
@@ -11,10 +7,6 @@ const Users = ({
   setSearch,
   users,
   deleteUser,
-  showUserDetails,
-  showModal,
-  selectedUser,
-  hideUserDEtails,
 }) => {
   const navigate = useNavigate();
   const goToAddUser = () => navigate("add-user");
@@ -40,10 +32,8 @@ const Users = ({
           search={search}
           users={users}
           deleteUser={deleteUser}
-          showModal={showUserDetails}
         />
       </div>
-      {showModal && <UserModal user={selectedUser} onClose={hideUserDEtails} />}
     </>
   );
 };
