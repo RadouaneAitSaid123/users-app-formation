@@ -16,7 +16,6 @@ const Users = ({
   hideUserDEtails,
 }) => (
   <>
-    <UserDetails id={selectedUser?.id} />
     <InputSearch value={search} onChange={(e) => setSearch(e.target.value)} />
     <div className="mt-5">
       <UserList
