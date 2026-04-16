@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router";
 
 const UserRow = ({ user, deleteUser, showUserDetails }) => {
-  const { name, lastname, email, phone, id} = user;
+  const { name, lastname, email, phone, id } = user;
+
+  const navigate = useNavigate();
+
+  const goToDetails = () => navigate(`${id}`);
+
   return (
     <tr>
       <td>{name}</td>
@@ -14,7 +20,7 @@ const UserRow = ({ user, deleteUser, showUserDetails }) => {
         >
           <i className="bi bi-trash"></i>
         </button>
-        <button className="btn btn-info btn-sm" onClick={() => showUserDetails(user)}>
+        <button className="btn btn-info btn-sm" onClick={goToDetails}>
           <i className="bi bi-eye"></i>
         </button>
       </td>
@@ -22,4 +28,4 @@ const UserRow = ({ user, deleteUser, showUserDetails }) => {
   );
 };
 
-export default UserRow
+export default UserRow;
