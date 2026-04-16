@@ -1,8 +1,6 @@
-// gestion d'etat
-// cliquer sur "ajouter" => go to users page
-
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import UserForm from "../../components/UserForm";
 
 const AddUser = () => {
   const navigate = useNavigate();
@@ -24,22 +22,7 @@ const AddUser = () => {
   return (
     <div>
       <h1>Add user form</h1>
-
-      <div>
-        <div>
-          <label>Name: </label>
-          <input type="text" name="name" onChange={handleChange} />
-        </div>
-        <div>
-          <label>Lastname: </label>
-          <input type="text" name="lastName" onChange={handleChange} />
-        </div>
-        <div>
-          <label>Email: </label>
-          <input type="email" name="email" onChange={handleChange} />
-        </div>
-        <button onClick={addUser}>Add</button>
-      </div>
+      <UserForm handleChange={handleChange} handleSubmit={addUser} user={user} label="Add" />
     </div>
   );
 };

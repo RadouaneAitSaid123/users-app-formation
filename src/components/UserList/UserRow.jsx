@@ -5,7 +5,9 @@ const UserRow = ({ user, deleteUser, showUserDetails }) => {
 
   const navigate = useNavigate();
 
-  const goToDetails = () => navigate(`${id}`);
+  const goToDetails = () => navigate(`view/${id}`);
+
+  const goToEdit = () => navigate(`edit/${id}`);
 
   return (
     <tr>
@@ -20,8 +22,11 @@ const UserRow = ({ user, deleteUser, showUserDetails }) => {
         >
           <i className="bi bi-trash"></i>
         </button>
-        <button className="btn btn-info btn-sm" onClick={goToDetails}>
+        <button className="btn btn-info btn-sm me-2" onClick={goToDetails}>
           <i className="bi bi-eye"></i>
+        </button>
+        <button className="btn btn-success btn-sm" onClick={goToEdit}>
+          <i className="bi bi-pen"></i>
         </button>
       </td>
     </tr>

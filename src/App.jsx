@@ -6,6 +6,7 @@ import UserDetails from "./pages/User";
 import NotFoundPage from "./pages/NotFound";
 import AddUser from "./pages/AddUser";
 import Users from "./pages/Users";
+import EditUser from "./pages/EditUser";
 
 const Home = () => "Home Page";
 
@@ -20,7 +21,8 @@ const App = () => {
             <Route path="/users">
               <Route index element={<Users />} />
               <Route path="add-user" element={<AddUser />} />
-              <Route path=":id" element={<UserDetails />} />
+              <Route path="view/:id" element={<UserDetails />} />
+              <Route path="edit/:id" element={<EditUser />} />
             </Route>
 
             <Route path="/*" element={<NotFoundPage />} />

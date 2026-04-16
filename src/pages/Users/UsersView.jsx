@@ -24,8 +24,7 @@ const Users = ({
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-
-        <button onClick={goToAddUser}>Add user</button>
+        <button className="btn btn-primary" onClick={goToAddUser}>Add user</button>
       </div>
       <div className="mt-5">
         <UserList
