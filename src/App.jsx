@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import UserDetails from "./pages/User";
 import NotFoundPage from "./pages/NotFound";
 import AddUser from "./pages/AddUser";
-import Users from "./pages/Users/UsersView";
+import Users from "./pages/Users";
 
 const Home = () => "Home Page";
 

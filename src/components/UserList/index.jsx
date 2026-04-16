@@ -5,7 +5,7 @@ import UserRow from "./UserRow";
 const Table = ({ search, users, deleteUser }) => {
   const filteredList = useMemo(
     () =>
-      users.filter((user) =>
+      (users || []).filter((user) =>
         user.name.toLowerCase().includes(search.toLowerCase()),
       ),
     [search, users],
