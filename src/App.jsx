@@ -1,19 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import "./App.css";
-import Navbare from "./components/navbar";
-import Users from "./pages/users";
-import UserDetails from "./pages/user";
-import NotFoundPage from "./pages/not-found";
-import AddUser from "./pages/add-user";
+import Navbar from "./components/Navbar";
+import Users from "./pages/Users";
+import UserDetails from "./pages/User";
+import NotFoundPage from "./pages/NotFound";
+import AddUser from "./pages/AddUser";
 
 const Home = () => "Home Page";
 
 const App = () => {
   return (
     <>
-      <Navbare />
-      <div style={{ margin: 4 }}>
+      <Navbar />
+      <div className="container mt-4">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
