@@ -2,10 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router";
 
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Users from "./pages/Users";
 import UserDetails from "./pages/User";
 import NotFoundPage from "./pages/NotFound";
 import AddUser from "./pages/AddUser";
+import Users from "./pages/Users/UsersView";
 
 const Home = () => "Home Page";
 
