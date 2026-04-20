@@ -21,7 +21,7 @@ const EditUser = () => {
         if (userById && userById.name) {
             setUser({
                 name: userById.name,
-                lastName: userById.lastname,
+                lastName: userById.lastName,
                 email: userById.email,
             });
         }
@@ -32,7 +32,14 @@ const EditUser = () => {
     };
 
     const editUser = () => {
-        navigate("/users");
+        fetch(`http://localhost:5051/api/users/${id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user),
+        })
+            .then((res) => res.json())
+            .then(() => navigate("/users"))
+            .catch((err) => console.log({ err }));
     };
 
     if (isLoading) return <div>Loading...</div>;

@@ -10,9 +10,9 @@ const useUser = (userId) => {
       setIsloading(true);
       setError(null);
 
-      fetch("https://jsonplaceholder.typicode.com/users" + "/" + userId)
+      fetch(`http://localhost:5051/api/users/${userId}`)
         .then((res) => res.json())
-        .then((res) => setUser({ ...res, lastname: res.username }))
+        .then((res) => setUser(res))
         .catch((err) => {
           console.log({ err });
           setError(err.message);

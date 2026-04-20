@@ -14,7 +14,9 @@ const UsersContainer = () => {
   }, [allUsers]);
 
   const deleteUser = (id) => {
-    setUsers(users.filter((user) => user.id !== id));
+    fetch(`http://localhost:5051/api/users/${id}`, { method: "DELETE" })
+      .then(() => setUsers(users.filter((user) => user.id !== id)))
+      .catch((err) => console.log({ err }));
   };
 
   if (isLoading)

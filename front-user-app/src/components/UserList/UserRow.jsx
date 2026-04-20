@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 
 const UserRow = ({ user, deleteUser, showUserDetails }) => {
-  const { name, lastname, email, phone, id } = user;
+  const { name, lastName, email, phone, id } = user;
 
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ const UserRow = ({ user, deleteUser, showUserDetails }) => {
   return (
     <tr>
       <td>{name}</td>
-      <td>{lastname}</td>
+      <td>{lastName}</td>
       <td>{email}</td>
       <td>{phone}</td>
       <td>

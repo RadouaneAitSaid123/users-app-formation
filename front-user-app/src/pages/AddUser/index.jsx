@@ -16,7 +16,14 @@ const AddUser = () => {
   };
 
   const addUser = () => {
-    navigate("/users");
+    fetch("http://localhost:5051/api/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then(() => navigate("/users"))
+      .catch((err) => console.log({ err }));
   };
 
   return (

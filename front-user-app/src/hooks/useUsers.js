@@ -9,19 +9,9 @@ const useUsers = () => {
     setIsloading(true);
     setError(null);
 
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:5051/api/users")
       .then((res) => res.json())
-      .then((res) =>
-        setUsers(
-          res.map(({ name, id, username: lastname, phone, email }) => ({
-            name,
-            id,
-            lastname,
-            phone,
-            email,
-          })),
-        ),
-      )
+      .then((res) => setUsers(res))
       .catch((err) => {
         console.log({ err });
         setError(err.message);

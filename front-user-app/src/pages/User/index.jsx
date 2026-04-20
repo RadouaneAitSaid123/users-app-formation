@@ -37,7 +37,7 @@ const UserDetails = () => {
               <hr />
               <div className="mb-3">
                 <label className="text-muted small">Lastname</label>
-                <p className="fs-5 fw-bold">{user.lastname}</p>
+                <p className="fs-5 fw-bold">{user.lastName}</p>
               </div>
               <hr />
               <div className="mb-3">
