@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import UserForm from "../../components/UserForm";
+import { useAlert } from "../../context/AlertContext";
 
 const AddUser = () => {
   const navigate = useNavigate();
+  const { showAlert } = useAlert();
 
   const [user, setUser] = useState({
     name: "",
@@ -22,8 +24,11 @@ const AddUser = () => {
       body: JSON.stringify(user),
     })
       .then((res) => res.json())
-      .then(() => navigate("/users"))
-      .catch((err) => console.log({ err }));
+      .then(() => {
+        showAlert("User added successfully!", "success");
+        navigate("/users");
+      })
+      .catch(() => showAlert("Failed to add user. Please try again.", "danger"));
   };
 
   return (

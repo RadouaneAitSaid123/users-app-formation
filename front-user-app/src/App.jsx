@@ -7,12 +7,13 @@ import NotFoundPage from "./pages/NotFound";
 import AddUser from "./pages/AddUser";
 import Users from "./pages/Users";
 import EditUser from "./pages/EditUser";
+import { AlertProvider } from "./context/AlertContext";
 
 const Home = () => "Home Page";
 
 const App = () => {
   return (
-    <>
+    <AlertProvider>
       <Navbar />
       <div className="container mt-4">
         <BrowserRouter>
@@ -29,7 +30,7 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </div>
-    </>
+    </AlertProvider>
   );
 };
 
