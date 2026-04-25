@@ -20,6 +20,9 @@ Thumbs.db
 # Mac
 .DS_Store
 
+# LSCache
+*.lscache
+
 # ReSharper / Rider
 _ReSharper*/
 *.[Rr]e[Ss]harper
