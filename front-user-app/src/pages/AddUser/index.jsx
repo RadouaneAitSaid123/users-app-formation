@@ -11,6 +11,7 @@ const AddUser = () => {
     name: "",
     lastName: "",
     email: "",
+    phone: "",
   });
 
   const handleChange = ({ target: { name, value } }) => {
