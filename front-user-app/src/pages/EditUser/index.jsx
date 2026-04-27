@@ -15,6 +15,7 @@ const EditUser = () => {
     name: "",
     lastName: "",
     email: "",
+    phone: "",
   });
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const EditUser = () => {
         name: userById.name,
         lastName: userById.lastName,
         email: userById.email,
+        phone: userById.phone,
       });
     }
   }, [userById]);
